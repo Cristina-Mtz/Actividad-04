@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "PERSONAJE.h"
 void capturar_enteros()
 	{
 			int enteros[5],i;
@@ -39,7 +40,7 @@ main()
 		do
 			{
 				int op;
-					printf("Seleccione una opci%cn:\n1.Capturar enteros.\n2.Mostrar.\n3.Personaje.\n4.Salir.\n",162);scanf("%d",&op);
+					printf("Seleccione una opci%cn:\n1.Capturar enteros.\n2.Mostrar.\n3.Capturar personaje.\n4.Mostrar personajes\n5.Salir.\n",162);scanf("%d",&op);
 				switch(op)
 					{
 						case 1: 
@@ -52,9 +53,11 @@ main()
 								scanf("%d",&n);
 								mostrar(n,cadena);
 						break;
-						case 3:
+						case 3: capturar_personaje();
 						break;
-						case 4: rep=1;
+						case 4: mostrar_personajes();
+						break;
+						case 5: rep=1;
 						break;
 						default:printf("OPCION INVALIDA");
 			}
